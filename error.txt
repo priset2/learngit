@@ -1,0 +1,2 @@
+1. Showing Recent Messages 2 duplicate symbols for architecture arma64
+Reason:在Xcode软件中，生成的一个项目只能有一个主函数，不同cpp文件之间也不可以有同名函数
