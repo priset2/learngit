@@ -6,10 +6,11 @@
 //
 //浅拷贝 深拷贝_27
 //列表初始化_28
-#include <iostream>
-using namespace std;
 
 // 1
+
+#include"Header.h"
+/*
 class person
 {
 public:
@@ -56,5 +57,53 @@ void test01()
 int main()
 {
     test01();
+    return 0;
+}
+
+#include"Header.h"
+
+class person1
+{
+public:
+    
+    person1(int a,int b,int c)
+    {
+        m_a=a;
+        m_b=b;
+        m_c=c;
+    }
+    person1():m_a(10),m_b(20),m_c(30)//列表构造
+    {
+        
+    };
+    int m_a;
+    int m_b;
+    int m_c;
+};
+
+void test02()
+{
+    person1 p;
+    cout<<"a= "<<p.m_a<<endl;
+    cout<<"b= "<<p.m_b<<endl;
+    cout<<"c= "<<p.m_c<<endl;
+}
+int main()
+{
+    test02();
+    return 0;
+}
+*/
+
+
+
+//类对象作为类成员
+
+
+
+
+int main()
+{
+    
     return 0;
 }

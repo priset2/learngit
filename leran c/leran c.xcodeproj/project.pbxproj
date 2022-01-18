@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		81635DBE2795983E00B32156 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81635DBD2795983E00B32156 /* main.cpp */; };
-		81635DC52795A03A00B32156 /* learn _28.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81635DC42795A03A00B32156 /* learn _28.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,7 +25,7 @@
 /* Begin PBXFileReference section */
 		81635DBA2795983E00B32156 /* leran c */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "leran c"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81635DBD2795983E00B32156 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		81635DC42795A03A00B32156 /* learn _28.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "learn _28.cpp"; sourceTree = "<group>"; };
+		81635DC6279650F300B32156 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +42,7 @@
 		81635DB12795983E00B32156 = {
 			isa = PBXGroup;
 			children = (
+				81635DC6279650F300B32156 /* Header.h */,
 				81635DBC2795983E00B32156 /* leran c */,
 				81635DBB2795983E00B32156 /* Products */,
 			);
@@ -60,7 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				81635DBD2795983E00B32156 /* main.cpp */,
-				81635DC42795A03A00B32156 /* learn _28.cpp */,
 			);
 			path = "leran c";
 			sourceTree = "<group>";
@@ -123,7 +122,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				81635DBE2795983E00B32156 /* main.cpp in Sources */,
-				81635DC52795A03A00B32156 /* learn _28.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
