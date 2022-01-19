@@ -143,5 +143,60 @@ int main()
     test();
     return 0;
 }
+
+//静态成员
+class person
+{
+  public:
+    static int m_a;
+    //静态成员变量同样有访问权限
+private:
+    static int m_b;
+};
+
+ 
+int person::m_a=100;//  唯一性，统一名称的静态变量只能同时存在一个值,所有对象共享一个变量
+
+void test ()
+{
+    person p;
+    cout<<p.m_a<<endl;
+    cout<<person::m_a<<endl;//可以直接通过类名访问
+    
+}
+
+
+
 */
-静态成员
+//静态成员函数
+// 1`所有对象共享同一个函数
+// 2～只可以访问静态成员变量
+class person
+{
+public:
+    
+    static void func()
+    {
+        a=100;
+        //b=200;
+        cout<<"静态成员函数"<<endl;
+    }
+    static int a;
+    int  b;
+};
+void  test ()
+{
+    person p;
+    p.func();//两种访问方式
+    
+    person::func();
+}
+
+
+int person::a=100;
+int main()
+{
+    test();
+    
+    return 0;
+}
