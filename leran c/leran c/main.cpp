@@ -93,17 +93,55 @@ int main()
     test02();
     return 0;
 }
-*/
+
 
 
 
 //类对象作为类成员
+//先构造其他对象，再构造自身，析构顺序相反
+class phone
+{
+public:
+    
+    phone (string name)
+    {
+        p_name=name;
+        cout<<"phone的构造函数"<<endl;
+    }
+    
+    
+    string p_name;
+    
+    
+};
 
-
-
+class person
+{
+public:
+    
+    person(string name ,string pname):m_name(name), m_phone(pname)
+    {
+        cout<<"person的构造函数"<<endl;
+    }
+    string m_name;
+    
+    phone m_phone;
+   
+    
+    
+};
+void test()
+{
+    person p("张三","iphone 13");
+    
+    cout<<p.m_name<<"--> "<<p.m_phone.p_name<<endl;
+    
+}
 
 int main()
 {
-    
+    test();
     return 0;
 }
+*/
+静态成员
