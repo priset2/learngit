@@ -167,7 +167,7 @@ void test ()
 
 
 
-*/
+
 //静态成员函数
 // 1`所有对象共享同一个函数
 // 2～只可以访问静态成员变量
@@ -200,3 +200,93 @@ int main()
     
     return 0;
 }
+
+//成员变量和函数分开储存
+//只有非静态成员变量属于类的对象
+class person
+{
+    int m_a;
+    static int m_b;
+    void func()
+    {
+        
+    }
+};
+int person :: m_b=10;
+void test()
+{
+    person p;
+    
+    cout<<"对象占用空间为： "<<sizeof(p)<<endl;
+}
+//空对象占用空间为：1
+//空对象的存储地址储存在这一个字节中
+void test2()
+{
+    person p;
+    
+    cout<<"对象占用空间为： "<<sizeof(p)<<endl;
+}
+//存在非静态成员(m_a)（一个）时占用字节数为 4
+//静态变量不占用空间(m_b);
+//成员函数不属于类对象
+//静态函数不属于类对象
+int main()
+{
+    test2();
+    
+    return 0;
+}
+
+
+
+//this 指针
+//指向被调用的成员函数所属于的对象
+//this 指针隐含，直接调用
+//作用 ：1 解决名称冲突
+   //     2 返回对象本身
+
+class person
+{
+public:
+    person(int age)
+    {
+       this->age=age;// 1
+      
+    }
+    person& addage(person& p)//重点
+    {
+        this->age+=p.age;//  2
+        return *this;
+    }
+    int age;
+};
+
+void v01()
+{
+    person p(18);
+    {
+        cout<<p.age<<endl;
+    }
+    
+}
+void v02()
+{
+    person p1(10);
+    person p2(10);
+    //链式编程
+    p2.addage(p1).addage(p1).addage(p1);
+    cout<<p2.age<<endl;
+}
+
+int main()
+{
+    v01();
+    v02();
+    return 0;
+}
+*/
+
+
+//空指针调用成员函数
+//
